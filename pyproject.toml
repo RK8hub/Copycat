@@ -1,0 +1,19 @@
+[build-system]
+requires=["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "copycat"
+version = "0.1.0"
+description = "Utilidad CLI para copiar el contenido de ficheros al portapapeles y mostrarlo simultáneamente en la terminal."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{name = "RK8", email = "contact@rk8.dev"}]
+dependencies = ["pyperclip","rich"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+copycat = "copycat.cli:main"
